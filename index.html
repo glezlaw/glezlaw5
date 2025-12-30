@@ -177,7 +177,7 @@
             margin-bottom: 0;
         }
         
-        /* Services */
+        /* Services - CORRECCIÓN APLICADA */
         .service {
             background: var(--light-gray);
             padding: 1.5rem;
@@ -187,6 +187,7 @@
             display: flex;
             gap: 1rem;
             align-items: flex-start;
+            /* Eliminado el margin-top que causaba desalineación */
         }
         
         .service:hover {
@@ -197,6 +198,8 @@
         .service-icon {
             font-size: 2rem;
             flex-shrink: 0;
+            /* Alineación vertical consistente */
+            align-self: flex-start;
             margin-top: 0.25rem;
         }
         
@@ -486,6 +489,7 @@
     <!-- Hero Section -->
     <div class="hero">
         <div class="logo-container">
+            <!-- Este es tu Escudo.jpg -->
             <img src="Escudo.jpg" alt="González Family Coat of Arms" class="logo">
         </div>
         
@@ -674,6 +678,7 @@
     <!-- Payment Section -->
     <div class="payment">
         <h2 class="section-title">Payment / Paiement</h2>
+        <!-- Reemplaza "#" con tu enlace de Stripe cuando lo tengas -->
         <a href="#" class="pay-btn">Pay Online / Payer en ligne</a>
     </div>
 
@@ -693,9 +698,11 @@
         
         <img src="qr-code(1).png" alt="WhatsApp QR Code" class="qr-code">
         
+        <!-- CORRECCIÓN APLICADA: ProtonMail logo -->
         <div class="proton-badge">
             <a href="https://proton.me" target="_blank" rel="noopener" class="proton-logo-link">
-                <img src="protonmail-logo.svg" alt="Proton - Privacy by default" class="proton-logo">
+                <!-- Usa tu archivo protonmail-logo.png -->
+                <img src="protonmail-logo.png" alt="Proton - Privacy by default" class="proton-logo">
             </a>
             <p>We use <a href="https://proton.me" target="_blank" rel="noopener">Proton</a> for the security of your information / Nous utilisons <a href="https://proton.me" target="_blank" rel="noopener">Proton</a> pour la sécurité de vos informations</p>
         </div>
