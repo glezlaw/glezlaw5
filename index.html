@@ -18,18 +18,17 @@
         body { font-family: 'Inter', sans-serif; color: var(--navy); line-height: 1.6; background: var(--white); }
         .hero { background: linear-gradient(135deg, var(--navy) 0%, #1a2332 100%); color: var(--white); padding: 4rem 2rem 5rem; text-align: center; }
         .hero h1 { font-size: 2.5em; margin-bottom: 0.5em; color: var(--turquoise); }
-        .hero p { font-size: 1.2em; max-width: 800px; margin: 0 auto; }
+        .hero p { font-size: 1.2em; max-width: 800px; margin: 0 auto 1em; }
         .split { display: flex; flex-wrap: wrap; gap: 2rem; max-width: 1200px; margin: 3rem auto; }
         .left, .right { flex: 1; min-width: 300px; background: var(--navy); color: var(--white); padding: 2rem; border-radius: 10px; }
         .left img { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1rem; }
-        .left ul { list-style: none; padding: 0; text-align: left; }
-        .left li { margin: 0.5rem 0; padding-left: 1rem; position: relative; }
-        .left li:before { content: '•'; color: var(--turquoise); font-weight: bold; position: absolute; left: 0; }
-        .right h2 { color: var(--white); margin-bottom: 1rem; }
-        .right ul { list-style: none; padding: 0; text-align: left; }
-        .right li { margin: 1rem 0; padding-left: 1.5rem; position: relative; }
-        .right li:before { content: '→'; color: var(--turquoise); font-weight: bold; position: absolute; left: 0; }
-        .form-section { margin: 2rem 0; text-align: center; }
+        .bilingual-columns { display: flex; gap: 2rem; margin: 2rem 0; }
+        .column { flex: 1; }
+        .column h3 { color: var(--turquoise); margin-bottom: 1rem; text-align: center; }
+        .column ul { list-style: none; padding: 0; text-align: left; }
+        .column li { margin: 0.5rem 0; padding-left: 1rem; position: relative; }
+        .column li:before { content: '•'; color: var(--turquoise); font-weight: bold; position: absolute; left: 0; }
+        .form-section { text-align: center; margin: 2rem 0; }
         .form-section form { max-width: 500px; margin: 0 auto; text-align: left; }
         .form-section input, .form-section textarea { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border: 1px solid var(--text-gray); border-radius: 5px; }
         .form-section button { background: var(--turquoise); color: var(--white); border: none; padding: 0.75rem 1.5rem; border-radius: 5px; cursor: pointer; font-weight: 500; }
@@ -41,7 +40,7 @@
         .proton-banner { text-align: center; margin: 2rem 0; background: var(--light-gray); padding: 1rem; border-radius: 5px; }
         .proton-banner img { max-width: 100px; margin-right: 0.5rem; }
         .footer { text-align: center; padding: 2rem; background: var(--navy); color: var(--white); font-size: 0.9em; }
-        @media (max-width: 768px) { .split { flex-direction: column; } .hero h1 { font-size: 2em; } }
+        @media (max-width: 768px) { .bilingual-columns { flex-direction: column; } .split { flex-direction: column; } .hero h1 { font-size: 2em; } }
     </style>
 </head>
 <body>
@@ -53,59 +52,87 @@
         <p>Tax & Residency Services for Expats on Costa del Sol / Services Fiscaux et Résidence pour Expats sur Costa del Sol</p>
     </section>
 
-    <!-- Split About & Services -->
-    <section class="split-container">
-        <div class="split">
-            <div class="left">
-                <h2>About Me / À propos</h2>
-                <img src="jorge-photo.jpg" alt="Jorge González">
+    <!-- Bilingual Columns for About Me -->
+    <section class="bilingual-section">
+        <h2 class="section-title" style="text-align: center; margin: 2rem 0;">About Me / À propos</h2>
+        <div class="bilingual-columns">
+            <div class="column">
+                <h3>English</h3>
                 <ul>
                     <li>Bachelor of Laws (Universidad Católica de Ávila).</li>
                     <li>LLM in International Business Law (National University of Ireland Maynooth and Université Catholique de Lyon).</li>
                     <li>Master of Laws in Tax Law (Lund University).</li>
                     <li>Master of Arts in Contemporary European Studies (University of Sussex).</li>
-                    <li>Unlike other facilitators, my legal background and local roots in the area allow me to provide comprehensive advice and set you up ready from day one, making your integration seamless in every sense. / Contrairement à d'autres facilitateurs, mon background académique en droit et le fait d'être né et élevé dans la région me permettent de vous conseiller de manière complète et de vous préparer dès le premier jour, rendant votre intégration fluide dans tous les sens.</li>
+                    <li>Unlike other facilitators, my legal background and local roots in the area allow me to provide comprehensive advice and set you up ready from day one, making your integration seamless in every sense.</li>
                 </ul>
             </div>
-            <div class="right">
-                <h2>Services / Services</h2>
+            <div class="column">
+                <h3>Français</h3>
                 <ul>
-                    <li>Beckham Regime: Special tax scheme for relocated workers with a fixed 24% rate for 6 years. / Régime Beckham: Régime fiscal spécial pour travailleurs déplacés avec taux fixe de 24% pendant 6 ans.</li>
-                    <li>Tax Residency Strategy: Customized planning to optimize your fiscal residence and integration on Costa del Sol. / Stratégie de Résidence Fiscale: Planification personnalisée pour optimiser votre résidence et intégration sur Costa del Sol.</li>
-                    <li>International Tax Planning: Cross-border structures for income, investments, and estate planning for expats. / Planification Fiscale Internationale: Structures transfrontalières pour revenus, investissements et planification successorale pour expats.</li>
-                    <li>All-in-one Support: From NIE application to tax efficiency, your comprehensive solution for seamless integration. / Support Tout-en-un: De la demande de NIE à l'efficacité fiscale, votre solution complète pour une intégration sans faille.</li>
+                    <li>Bachelor of Laws (Universidad Católica de Ávila).</li>
+                    <li>LLM en Droit International des Affaires (National University of Ireland Maynooth et Université Catholique de Lyon).</li>
+                    <li>Master of Laws en Droit Fiscal (Université de Lund).</li>
+                    <li>Master of Arts en Études Européennes Contemporaines (University of Sussex).</li>
+                    <li>Contrairement à d'autres facilitateurs, mon background académique en droit et le fait d'être né et élevé dans la région me permettent de vous conseiller de manière complète et de vous préparer dès le premier jour, rendant votre intégration fluide dans tous les sens.</li>
                 </ul>
-                <div class="form-section">
-                    <h3>Inquiry / Demande</h3>
-                    <form action="mailto:jorge@glez.law" method="post" enctype="text/plain">
-                        <input type="text" name="name" placeholder="Your Name / Votre Nom" required>
-                        <input type="email" name="email" placeholder="Your Email / Votre Email" required>
-                        <textarea name="message" placeholder="Your Question / Votre Question" rows="4" required></textarea>
-                        <button type="submit">Send / Envoyer</button>
-                    </form>
-                </div>
             </div>
         </div>
     </section>
 
+    <!-- Bilingual Columns for Services -->
+    <section class="bilingual-section">
+        <h2 class="section-title" style="text-align: center; margin: 2rem 0;">Services / Services</h2>
+        <div class="bilingual-columns">
+            <div class="column">
+                <h3>English</h3>
+                <ul>
+                    <li>Beckham Regime: Special tax scheme for relocated workers with a fixed 24% rate for 6 years.</li>
+                    <li>Tax Residency Strategy: Customized planning to optimize your fiscal residence and integration on Costa del Sol.</li>
+                    <li>International Tax Planning: Cross-border structures for income, investments, and estate planning for expats.</li>
+                    <li>All-in-one Support: From NIE application to tax efficiency, your comprehensive solution for seamless integration.</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Français</h3>
+                <ul>
+                    <li>Régime Beckham: Régime fiscal spécial pour travailleurs déplacés avec taux fixe de 24% pendant 6 ans.</li>
+                    <li>Stratégie de Résidence Fiscale: Planification personnalisée pour optimiser votre résidence et intégration sur Costa del Sol.</li>
+                    <li>Planification Fiscale Internationale: Structures transfrontalières pour revenus, investissements et planification successorale pour expats.</li>
+                    <li>Support Tout-en-un: De la demande de NIE à l'efficacité fiscale, votre solution complète pour une intégration sans faille.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="form-section">
+        <h2 style="text-align: center; margin: 2rem 0;">Inquiry / Demande</h2>
+        <form action="mailto:jorge@glez.law" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name / Votre Nom" required>
+            <input type="email" name="email" placeholder="Your Email / Votre Email" required>
+            <textarea name="message" placeholder="Your Question / Votre Question" rows="4" required></textarea>
+            <button type="submit">Send / Envoyer</button>
+        </form>
+    </section>
+
     <!-- Video Calls -->
     <section class="video-calls">
-        <h2>Video Calls / Appels Vidéo</h2>
+        <h2 style="text-align: center; margin: 2rem 0;">Video Calls / Appels Vidéo</h2>
         <button onclick="window.location.href='https://whereby.com/glez-consulta';">Join Whereby / Rejoindre Whereby</button>
         <button onclick="window.location.href='https://meet.jit.si/glez-consulta';">Join Jitsi / Rejoindre Jitsi</button>
     </section>
 
     <!-- Payment -->
     <section class="payment">
-        <h2>Payment / Paiement</h2>
+        <h2 style="text-align: center; margin: 2rem 0;">Payment / Paiement</h2>
         <button onclick="window.location.href='https://buy.stripe.com/xxx';">Pay Online / Payer en ligne</button> <!-- Replace with your Stripe link -->
     </section>
 
     <!-- Contact -->
     <section class="contact">
-        <h2>Contact / Contact</h2>
-        <p>📧 <a href="mailto:jorge@glez.law">jorge@glez.law</a></p>
-        <p>📱 <a href="tel:+34635799282">+34 635 79 92 82</a></p>
+        <h2 style="text-align: center; margin: 2rem 0;">Contact / Contact</h2>
+        <p style="margin: 1rem 0;">📧 <a href="mailto:jorge@glez.law">jorge@glez.law</a></p>
+        <p style="margin: 1rem 0;">📱 <a href="tel:+34635799282">+34 635 79 92 82</a></p>
         <img src="qr-code(1).png" alt="WhatsApp QR Code" class="qr-code">
     </section>
 
